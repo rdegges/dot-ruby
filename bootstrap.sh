@@ -16,5 +16,6 @@ printf "Installing latest stable release of Ruby..."
 release="$(rbenv install --list | grep "^[0-9]" | grep -v "[a-z]" | tail -n 1)"
 rbenv install $release
 rbenv global $release
+rbenv rehash
 
 printf "Done!"
