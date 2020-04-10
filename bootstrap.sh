@@ -15,5 +15,6 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 printf "Installing latest stable release of Ruby..."
 release="$(rbenv install --list | grep "^[0-9]" | grep -v "[a-z]" | tail -n 1)"
 rbenv install $release
+rbenv global $release
 
 printf "Done!"
